@@ -1,19 +1,13 @@
-.hero-bg{
+.hero-bg {
     background-image: linear-gradient(to right, #013223, #006747, #013223);
 }
-.mobile-menu{
-    transition: transform 0.3s ease-in-out;
-}
 
-/* Hover effect for the copy button */
-.copy-btn{
-    transition: all 0.2s ease-in-out;
-}
-.copy-btn:hover{
-    transform: scale(1.05);
-    background-color: #1a202c;
-    color: white;
-    border-color: #1a202c;
+.open-sans-font {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 /* Hover effect for the call button */
