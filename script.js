@@ -37,7 +37,6 @@ for (let btn of copyButtons) {
     });
 }
 
-
 // Call button click 
 const callButtons = document.getElementsByClassName('call-btn');
 for (let btn of callButtons) {
