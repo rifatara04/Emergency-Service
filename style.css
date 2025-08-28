@@ -1,0 +1,43 @@
+        .hero-bg {
+            background-image: linear-gradient(to right, #013223, #006747, #013223);
+        }
+
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect for the copy button */
+        .copy-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .copy-btn:hover {
+            transform: scale(1.05);
+            background-color: #1a202c; /* Equivalent to bg-slate-900 */
+            color: white;
+            border-color: #1a202c;
+        }
+
+        /* Hover effect for the call button */
+        .call-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .call-btn:hover {
+            transform: scale(1.05);
+            background-color: #22c55e; /* Equivalent to bg-green-500, slightly darker on hover */
+        }
+
+        /* Hover effect for the clear history button */
+        #clear-history {
+            transition: background-color 0.2s ease-in-out;
+        }
+        #clear-history:hover {
+            background-color: #16a34a; /* A slightly darker green for hover */
+        }
+
+        /* Hover effect for service tags (e.g., "All", "Police") */
+        .service-tag {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .service-tag:hover {
+            background-color: rgba(107, 114, 128, 0.5); /* A slightly darker gray */
+        }
