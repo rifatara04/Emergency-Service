@@ -1,4 +1,5 @@
-#Question and Answer Section
+#Question and Answer Section:
+
 Question no 1: What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 Answer:
