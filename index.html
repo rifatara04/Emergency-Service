@@ -9,76 +9,71 @@
     <title>Emergency Service</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manufacturing+Consent&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="bg-[#f5fff6] open-sans-font">
-    <nav class="flex items-center justify-between w-full sm:w-11/12 mx-auto p-2 bg-white flex-wrap">
-        <div class="flex items-center gap-2 w-48 h-[70px]">
-            <img src="assets/logo.png" class="w-[50px] h-[50px]" />
-            <h1 class="font-bold text-[#006747] text-2xl">Emergency Service</h1>
-        </div>
-
-        <button id="hamburger-btn" class="sm:hidden text-2xl text-gray-800 focus:outline-none">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <div class="hidden sm:flex gap-3">
-            <div class="flex items-center justify-center gap-1 px-4 py-2 rounded-3xl bg-[#41FF6B]/10 w-[80px] sm:w-[100px]">
-                <p id="heart-count" class="font-bold">0</p>
-                <img src="assets/heart.png" class="w-[25px]" />
+    <div class="bg-white">
+        <nav class="flex items-center justify-between sm:w-11/12 mx-auto p-2 bg-white">
+            <div class="flex items-center gap-2 w-48 h-[70px]">
+                <img src="assets/logo.png" class="w-[50px] h-[50px]" />
+                <h1 class="font-bold text-[#006747] text-3xl">Emergency Service</h1>
             </div>
-            <div class="flex items-center gap-1 px-4 py-2 rounded-3xl bg-[#41FF6B]/10 w-[80px] sm:w-[100px] justify-center">
-                <p id="coin-count" class="font-bold">100</p>
-                <img src="assets/coin.png" class="w-[25px]" />
-            </div>
-            <div
-                class="flex items-center gap-1 px-4 py-2 rounded-3xl bg-[#00A63E] text-white w-[80px] sm:w-[100px] justify-center">
-                <p id="copy-count" class="font-bold">0</p>
-                <p class="font-bold">Copy</p>
-            </div>
-        </div>
-    </nav>
 
-    <div id="mobile-menu"
-        class="mobile-menu hidden fixed inset-y-0 right-0 z-50 w-64 bg-white p-4 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="flex justify-end">
-            <button id="close-mobile-menu" class="text-2xl text-gray-800 focus:outline-none">
-                <i class="fa-solid fa-xmark"></i>
+            <div class="hidden sm:flex gap-3">
+                <div class="flex items-center justify-center gap-1 px-4 py-2 rounded-3xl bg-[#41FF6B]/10 w-[80px] sm:w-[100px]">
+                    <p id="heart-count" class="font-bold">0</p>
+                    <img src="assets/heart.png" class="w-[25px]" />
+                </div>
+                <div class="flex items-center gap-1 px-4 py-2 rounded-3xl bg-[#41FF6B]/10 w-[80px] sm:w-[100px] justify-center">
+                    <p id="coin-count" class="font-bold">100</p>
+                    <img src="assets/coin.png" class="w-[25px]" />
+                </div>
+                <div class="flex items-center gap-1 px-4 py-2 rounded-3xl bg-[#00A63E] text-white w-[80px] sm:w-[100px] justify-center">
+                    <p id="copy-count" class="font-bold">0</p>
+                    <p class="font-bold">Copy</p>
+                </div>
+            </div>
+
+            <button id="hamburger-btn" class="sm:hidden text-2xl text-gray-800 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
             </button>
-        </div>
-        <div class="flex flex-col gap-3 mt-8">
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#41FF6B]/10 w-full">
-                <img src="assets/heart.png" class="w-[25px]" />
-                <p class="font-bold">Hearts: <span id="heart-count-mobile">0</span></p>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-menu hidden fixed inset-y-0 right-0 z-50 w-64 bg-white p-4 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-end">
+                <button id="close-mobile-menu" class="text-2xl text-gray-800 focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#41FF6B]/10 w-full">
-                <img src="assets/coin.png" class="w-[25px]" />
-                <p class="font-bold">Coins: <span id="coin-count-mobile">100</span></p>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#00A63E] text-white w-full">
-                <i class="fa-regular fa-copy"></i>
-                <p class="font-bold">Copies: <span id="copy-count-mobile">0</span></p>
+            <div class="flex flex-col gap-3 mt-8">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#41FF6B]/10 w-full">
+                    <img src="assets/heart.png" class="w-[25px]" />
+                    <p class="font-bold">Hearts: <span id="heart-count-mobile">0</span></p>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#41FF6B]/10 w-full">
+                    <img src="assets/coin.png" class="w-[25px]" />
+                    <p class="font-bold">Coins: <span id="coin-count-mobile">100</span></p>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#00A63E] text-white w-full">
+                    <i class="fa-regular fa-copy"></i>
+                    <p class="font-bold">Copies: <span id="copy-count-mobile">0</span></p>
+                </div>
             </div>
         </div>
     </div>
 
-    <header
-        class="hero-bg mt-1 w-full h-[240px] sm:h-[250px] flex flex-col justify-center items-center gap-2 sm:gap-6 text-white text-center p-2 sm:p-4">
+    <header class="hero-bg mt-1 w-full min-h-[240px] sm:min-h-[250px] flex flex-col justify-center items-center gap-2 sm:gap-6 text-white text-center py-4 sm:p-4">
         <img src="assets/logo-dark.png" class="w-[92px] h-[92px]">
-        <h1 class="font-bold text-2xl">Emergency Service Directory</h1>
-        <p class="font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the
-            People’s Republic of Bangladesh</p>
+        <h1 class="font-bold text-3xl">Emergency Service Directory</h1>
+        <p class="font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
     </header>
 
-    <main class="w-full sm:w-11/12 mx-auto mt-6 flex flex-col-reverse md:flex-row gap-4 pb-1 px-2">
+    <main class="w-full sm:w-11/12 mx-auto mt-6 flex flex-col-reverse lg:flex-row gap-4 pb-1 px-2">
 
-        <section class="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <section class="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             <div class="card p-5 rounded-lg bg-white shadow-md flex flex-col justify-between">
                 <div class="flex justify-between items-center">
                     <img src="assets/emergency.png" class="w-[32px] h-[32px] bg-[#FFE3E2] p-2 rounded-lg" />
@@ -91,20 +86,17 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">All</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
             </div>
             <div class="card p-5 rounded-lg bg-white shadow-md flex flex-col justify-between">
                 <div class="flex justify-between items-center">
-                    <img src="assets/police.png" class="w-[32px] h-[32px] bg-[#FFE3E2] p-2 rounded-lg" />
+                    <img src="assets/police.png" class="w-[32px] h-[32px] bg-[#DFEFFF] p-2 rounded-lg" />
                     <i class="fa-regular fa-heart heart-icon text-xl cursor-pointer"></i>
                 </div>
                 <div class="mt-4">
@@ -114,13 +106,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Police</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -137,13 +126,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Fire</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -160,13 +146,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Health</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -183,13 +166,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Help</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -206,13 +186,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Govt.</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -229,13 +206,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Electricity</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -252,13 +226,10 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">NGO</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
@@ -275,21 +246,17 @@
                     <button class="bg-gray-500/20 rounded-3xl px-4 py-2">Travel</button>
                 </div>
                 <div class="mt-4 flex gap-2">
-                    <button
-                        class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl
-                                                 hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
+                    <button class="copy-btn flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-xl hover:bg-slate-900 hover:text-white text-gray-600 text-sm w-[180px] h-[40px]">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
-                    <button
-                        class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
+                    <button class="call-btn flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-xl text-sm w-[180px] h-[40px]">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
                 </div>
             </div>
-
         </section>
 
-        <section class="w-full md:w-1/4 bg-white shadow-md rounded-lg p-4 mt-4">
+        <section class="w-full lg:w-1/4 bg-white shadow-md rounded-lg p-4 mt-4">
             <div class="flex justify-between items-center border-b pb-2">
                 <h1 class="font-bold flex items-center gap-2">
                     <i class="fa-regular fa-clock"></i>Call History
@@ -297,10 +264,8 @@
                 <button id="clear-history" class="bg-green-500 px-4 py-1 text-white rounded-full text-sm">Clear</button>
             </div>
             <div id="history-list" class="mt-4 space-y-3 text-sm">
-
             </div>
         </section>
-
     </main>
     <script src="script.js"></script>
 </body>

@@ -7,9 +7,17 @@
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
 }
+
+.mobile-menu.translate-x-full {
+    transform: translateX(100%);
+}
+
+.mobile-menu.translate-x-0 {
+transform: translateX(0);
+}
+
 .call-btn{
     transition: all 0.2s ease-in-out;
 }
