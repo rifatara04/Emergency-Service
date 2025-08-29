@@ -1,21 +1,30 @@
-#Question and Answer Section:
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
-Question no 1: What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+Anser: getElementById(): Selects a single element by its ID. If the element exists, it returns the DOM element; otherwise, it returns null.
 
-Answer: The method getElementById() returns a single element whose id matches the given value. If no element with that id exists, it simply returns null. The method getElementsByClassName() returns all elements that share the specified class name, and the result is a live HTMLCollection, meaning it updates automatically if the DOM changes. On the other hand, querySelector() uses a CSS selector to find and return the first matching element only, while querySelectorAll() returns all matching elements using a CSS selector, but as a static NodeList, which does not update if the DOM changes.
+getElementsByClassName(): Selects all elements that have a specific class name. It returns a live HTMLCollection, which means it updates automatically when the DOM changes. This collection does not support the forEach() method directly, so you often need to convert it using Array.from().
 
-Question no 2: How do you create and insert a new element into the DOM?
+querySelector(): Selects the first element that matches any CSS selector. It returns a single DOM element.
 
-Answer: To create a new element in the DOM, we use the method document.createElement("tagName"). After creating the element, we can add text, attributes, or classes to it by using properties such as innerText, id, className, or even setAttribute(). Finally, the new element can be inserted into the document by using methods like appendChild() or append() on the parent element. For example, if we create a new div and set its text, then append it to the body, it will appear on the webpage.
+querySelectorAll(): Selects all elements matching a CSS selector and returns a static NodeList. Unlike getElementsByClassName(), this list does not update automatically when the DOM changes. However, it supports the forEach() method directly.
 
-Question no 3: What is Event Bubbling, and how does it work?
+2. How do you create and insert a new element into the DOM?
 
-Answer: Event bubbling is a process in the DOM where an event starts from the target element and then gradually moves upward through its parent elements until it reaches the top of the document. For example, if a button inside a div is clicked, the event first triggers on the button, then moves to the div, then to the body, and finally up to the document. This is the default way most events propagate in JavaScript.
+Anser: You create a new element using document.createElement('tagName'). Then, you can set its content or attributes using properties like innerText, innerHTML, id, or className. Finally, to add the element to the DOM, you use methods like appendChild() or append().
 
-Question no 4: What is Event Delegation in JavaScript? Why is it useful?
+3. What is Event Bubbling and how does it work?
 
-Answer: Event delegation is a technique where instead of adding separate event listeners to multiple child elements, we attach a single event listener to a parent element. Because of event bubbling, the parent can “catch” the events that happen inside its children. This is very useful because it improves performance by reducing the number of listeners and also makes it possible to handle events for dynamically created child elements without needing to attach new listeners every time.
+Answer: Event bubbling is a type of event propagation in the DOM. When an event happens on a child element, it first triggers on that element, then bubbles up to its parent elements, continuing up to the document root. You can stop this propagation using event.stopPropagation().
 
-Question no 5: What is the difference between preventDefault() and stopPropagation() methods?
+4. What is Event Delegation in JavaScript? Why is it useful?
 
-Answer: The method preventDefault() is used to stop the browser’s default behavior for an element. For example, it can stop a link from navigating to another page or prevent a form from submitting. On the other hand, stopPropagation() is used to stop the event from propagating further in the bubbling or capturing phase. In other words, it prevents the event from reaching parent or ancestor elements, but it does not affect the default behavior of the element.
+Answer: Event Delegation is a technique where you attach a single event listener to a parent element to manage events on its child elements. It is useful because:
+
+It improves performance by reducing the number of event listeners.
+It keeps your code cleaner.
+It allows handling events on elements that are added dynamically after the event listener is set.
+5. What is the difference between preventDefault() and stopPropagation() methods?
+
+Anser: preventDefault(): Prevents the default browser behavior of an element. Example: Preventing a form from submitting.
+
+stopPropagation(): Stops the event from bubbling up to parent elements. Example: A button click inside a div won’t trigger the div’s click event listener.
