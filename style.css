@@ -9,31 +9,3 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
-
-.mobile-menu.translate-x-full {
-    transform: translateX(100%);
-}
-
-.mobile-menu.translate-x-0 {
-transform: translateX(0);
-}
-
-.call-btn{
-    transition: all 0.2s ease-in-out;
-}
-.call-btn:hover{
-    transform: scale(1.05);
-    background-color: #22c55e;
-}
-#clear-history{
-    transition: background-color 0.2s ease-in-out;
-}
-#clear-history:hover{
-    background-color: #16a34a; 
-}
-.service-tag{
-    transition: background-color 0.2s ease-in-out;
-}
-.service-tag:hover{
-    background-color: rgba(107, 114, 128, 0.5); 
-}
